@@ -1,4 +1,80 @@
-.input{
-    max-width: 60px;
-    background: yellowgreen;
+table {
+    padding-top: 10px;
+    margin-left: 50px;
+}
+
+td {
+    height: 75px;
+    width: 75px;
+}
+
+input {
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+button {
+    border: 1px solid black;
+    height: 75px;
+    width: 250px;
+}
+
+#btnsolve {
+    margin-top: 25px;
+    margin-left: 150px;
+}
+
+#btnclear {
+    margin-top: 25px;
+}
+
+tr:first-child td {
+    border-top: solid 3px black;
+}
+
+tr:nth-child(3n) td {
+    border-bottom: solid 3px black;
+}
+
+td:first-child {
+    border-left: solid 3px black;
+}
+
+td:nth-child(3n) {
+    border-right: solid 3px black;
+}
+
+.solved {
+    margin: 10px 0px 0px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: inherit;
+}
+
+.incorrect {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: inherit;
+    color: red;
+}
+
+.contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

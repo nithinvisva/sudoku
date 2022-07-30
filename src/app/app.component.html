@@ -1,5 +1,19 @@
-<table>
-  <tr *ngFor="let i of array">
-    <td *ngFor="let j of array">{{sudoku[i][j]}}</td>
-  </tr>
-</table>
+<div>
+  <div class="contents">
+    <table>
+      <tr *ngFor="let row of array; let i = index">
+        <td *ngFor="let column of array; let f = index">
+          <input class="inputnum" id="{{'input' + (f + (i*9))}}" type="number" [(ngModel)]="sudoku[i][f]"
+            #column="ngModel" min="0" max="9">
+        </td>
+      </tr>
+    </table>
+    <div>
+      <p class="solved" *ngIf="isSolved">Here is the solved sudoku!!</p>
+  <p class="incorrect" *ngIf="!isGivenCorrect">The Sudoku is Incorrect!!</p>
+      <button mat-button [disabled]="isSolved || !isGivenCorrect" (click)="sudokuSolver()">Get Solution</button>
+      <button mat-button [disabled]="isSolved || !isGivenCorrect" (click)="loadExample()">Load Example</button>
+      <button mat-button *ngIf="isSolved || !isGivenCorrect" (click)="reloadSudoku()">Try Another</button>
+    </div>
+  </div>
+</div>
