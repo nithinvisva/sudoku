@@ -3,7 +3,7 @@
     <table>
       <tr *ngFor="let row of array; let i = index">
         <td *ngFor="let column of array; let f = index">
-          <input class="inputnum" id="{{'input' + (f + (i*9))}}" type="number" [(ngModel)]="sudoku[i][f]"
+          <input class="inputnum" id="{{'input' + (f + (i*9))}}" appAcceptOnlyOne type="number" [(ngModel)]="sudoku[i][f]"
             #column="ngModel" min="0" max="9">
         </td>
       </tr>

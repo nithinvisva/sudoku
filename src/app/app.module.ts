@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { AcceptOnlyOneDirective } from './directives/accept-only-one.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AcceptOnlyOneDirective
   ],
   imports: [
     BrowserModule,
