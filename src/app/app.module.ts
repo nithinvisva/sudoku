@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { AcceptOnlyOneDirective } from './directives/accept-only-one.directive';
+import { PreventNumberScrollDirective } from './directives/prevent-number-scroll.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AcceptOnlyOneDirective
+    AcceptOnlyOneDirective,
+    PreventNumberScrollDirective
   ],
   imports: [
     BrowserModule,
