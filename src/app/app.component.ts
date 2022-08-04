@@ -153,5 +153,13 @@ export class AppComponent {
     this.solution = [];
     this.prevSolution = [];
   }
+  keyEvent(event: KeyboardEvent,i:number,j: number) {
+    if(_.includes([0,1,2,3,4,5,6,7,8,9], _.toNumber(event.key))){
+      if(_.toString(this.sudoku[i][j]).length >= 1){
+        this.sudoku[i][j] = _.toNumber(event.key)
+
+      }
+    }
+  }
 }
 
