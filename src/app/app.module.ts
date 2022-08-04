@@ -8,12 +8,14 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { AcceptOnlyOneDirective } from './directives/accept-only-one.directive';
 import { PreventNumberScrollDirective } from './directives/prevent-number-scroll.directive';
+import { MoveToNextDirective } from './directives/move-to-next.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     AcceptOnlyOneDirective,
-    PreventNumberScrollDirective
+    PreventNumberScrollDirective,
+    MoveToNextDirective
   ],
   imports: [
     BrowserModule,

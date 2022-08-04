@@ -2,8 +2,8 @@
   <div class="contents">
     <table>
       <tr *ngFor="let row of array; let i = index">
-        <td *ngFor="let column of array; let f = index">
-          <input class="inputnum" id="{{'input' + (f + (i*9))}}" appAcceptOnlyOne appPreventNumberScroll type="number" [(ngModel)]="sudoku[i][f]"
+      <td *ngFor="let column of array; let f = index" id="{{'input' + (f + (i*9))}}" appMoveToNext>
+          <input class="inputnum" id="{{'input#' + (f + (i*9))}}" appAcceptOnlyOne appPreventNumberScroll type="number" [(ngModel)]="sudoku[i][f]"
             #column="ngModel" min="0" max="9">
         </td>
       </tr>
