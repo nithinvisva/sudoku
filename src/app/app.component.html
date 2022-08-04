@@ -10,10 +10,10 @@
     </table>
     <div>
       <p class="solved" *ngIf="isSolved">Here is the solved sudoku!!</p>
-  <p class="incorrect" *ngIf="!isGivenCorrect">The Sudoku is Incorrect!!</p>
-      <button mat-button [disabled]="isSolved || !isGivenCorrect" (click)="sudokuSolver()">Get Solution</button>
-      <button mat-button [disabled]="isSolved || !isGivenCorrect" (click)="loadExample()">Load Example</button>
-      <button mat-button *ngIf="isSolved || !isGivenCorrect" (click)="reloadSudoku()">Try Another</button>
+  <p class="solved incorrect" *ngIf="!isGivenCorrect">The Sudoku is Incorrect!!</p>
+      <button mat-stroked-button [disabled]="isSolved || !isGivenCorrect" (click)="sudokuSolver()">Get Solution</button>
+      <button mat-stroked-button [disabled]="isSolved || !isGivenCorrect" (click)="loadExample()">Load Example</button>
+      <button mat-stroked-button *ngIf="isSolved || !isGivenCorrect" (click)="reloadSudoku()">Try Another</button>
     </div>
   </div>
 </div>

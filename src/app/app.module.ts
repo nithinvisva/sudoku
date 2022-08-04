@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { AcceptOnlyOneDirective } from './directives/accept-only-one.directive';
 import { PreventNumberScrollDirective } from './directives/prevent-number-scroll.directive';
 import { MoveToNextDirective } from './directives/move-to-next.directive';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { MoveToNextDirective } from './directives/move-to-next.directive';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
+    MatButtonModule,
     FormsModule
   ],
   providers: [],
